@@ -19,7 +19,7 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/management
+    - url: http://skipjaq.com/jobs.html
       method: GET
       assert:
         http-code: 200
@@ -27,7 +27,7 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/offices
+    - url: http://skipjaq.com/jobs/pl/staff_engineer
       method: GET
       assert:
         http-code: 200
@@ -35,11 +35,7 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/jobs/uk/senior_staff_engineer
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com/jobs/pl/staff_engineer
+    - url: http://skipjaq.com/management
       method: GET
       assert:
         http-code: 200
@@ -47,7 +43,7 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/jobs.html
+    - url: http://skipjaq.com/jobs/uk/senior_staff_engineer
       method: GET
       assert:
         http-code: 200
@@ -55,11 +51,15 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/offices.html
+    - url: http://skipjaq.com/index.html
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/index.html
+    - url: http://skipjaq.com/offices
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/offices.html
       method: GET
       assert:
         http-code: 200
