@@ -5,10 +5,52 @@ metadata:
   generated:
     inputs: [google-analytics]
     host: http://skipjaq.com
-    date: 2017-06-08T12:35:27.235Z
-    generation-time: 0.585s
+    date: 2017-06-08T12:44:28.710Z
+    generation-time: 1.967s
 
 requests:
+  http-get-/jobs.html:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /jobs.html
+  http-get-/offices:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /offices
+  http-get-/:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /
+  http-get-/jobs_senior_java_developer_uk.html:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /jobs_senior_java_developer_uk.html
+  http-get-/team:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /team
+  http-get-/jobs/pl/staff_engineer:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /jobs/pl/staff_engineer
+  http-get-/board:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /board
   http-get-/jobs:
     sampler:
       type: HTTP
@@ -21,66 +63,12 @@ requests:
       properties:
         method: GET
         path: /management
-  http-get-/:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /
-  http-get-/board:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /board
-  http-get-/jobs.html:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /jobs.html
-  http-get-/jobs/pl/staff_engineer:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /jobs/pl/staff_engineer
   http-get-/jobs/uk/senior_staff_engineer:
     sampler:
       type: HTTP
       properties:
         method: GET
         path: /jobs/uk/senior_staff_engineer
-  http-get-/offices:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /offices
-  http-get-/team:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /team
-  http-get-/jobs_senior_developer_pl.html:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /jobs_senior_developer_pl.html
-  http-get-/jobs_senior_java_developer_uk.html:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /jobs_senior_java_developer_uk.html
-  http-get-/offices.html:
-    sampler:
-      type: HTTP
-      properties:
-        method: GET
-        path: /offices.html
   http-get-/index.html:
     sampler:
       type: HTTP
@@ -93,127 +81,63 @@ requests:
       properties:
         method: GET
         path: /brand.html
+  http-get-/offices.html:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /offices.html
+  http-get-/jobs_senior_developer_pl.html:
+    sampler:
+      type: HTTP
+      properties:
+        method: GET
+        path: /jobs_senior_developer_pl.html
 
 actors:
-- name: ActorGroup-12
-  entry:
-    request: http-get-/
-    arrival:
-      constant:
-        rate: 0.000445
-  edges:
-    http-get-/:
-      http-get-/team:
-        probability: 0.059
-        holding:
-          fixed:
-            delay: 0.972449
-      http-get-/:
-        probability: 0.016
-        holding:
-          fixed:
-            delay: 0.972449
-      http-get-/management:
-        probability: 0.003
-        holding:
-          fixed:
-            delay: 0.972449
-      http-get-/board:
-        probability: 0.001
-        holding:
-          fixed:
-            delay: 0.972449
-      http-get-/jobs:
-        probability: 0.02
-        holding:
-          fixed:
-            delay: 0.972449
-      http-get-/jobs/pl/staff_engineer:
-        probability: 0.001
-        holding:
-          fixed:
-            delay: 0.972449
-      http-get-/offices:
-        probability: 0.013
-        holding:
-          fixed:
-            delay: 0.972449
 - name: ActorGroup-6
   entry:
     request: http-get-/jobs
     arrival:
       constant:
-        rate: 0.000007
+        rate: 0.000002
   edges:
     http-get-/jobs:
-      http-get-/team:
-        probability: 0.043
-        holding:
-          fixed:
-            delay: 16.61614
-      http-get-/jobs:
-        probability: 0.022
-        holding:
-          fixed:
-            delay: 16.61614
       http-get-/jobs/pl/staff_engineer:
         probability: 0.129
         holding:
           fixed:
-            delay: 16.61614
-      http-get-/jobs/uk/senior_staff_engineer:
-        probability: 0.173
-        holding:
-          fixed:
-            delay: 16.61614
-      http-get-/offices:
-        probability: 0.029
-        holding:
-          fixed:
-            delay: 16.61614
-      http-get-/:
-        probability: 0.072
-        holding:
-          fixed:
-            delay: 16.61614
+            delay: 29.101584
       http-get-/management:
         probability: 0.007
         holding:
           fixed:
-            delay: 16.61614
-- name: ActorGroup-9
-  entry:
-    request: http-get-/jobs/pl/staff_engineer
-    arrival:
-      constant:
-        rate: 0.000009
-  edges:
-    http-get-/jobs/pl/staff_engineer:
+            delay: 29.101584
+      http-get-/jobs/uk/senior_staff_engineer:
+        probability: 0.094
+        holding:
+          fixed:
+            delay: 29.101584
       http-get-/:
-        probability: 0.064
+        probability: 0.072
         holding:
           fixed:
-            delay: 0.011678
-      http-get-/jobs:
-        probability: 0.064
-        holding:
-          fixed:
-            delay: 0.011678
+            delay: 29.101584
       http-get-/team:
-        probability: 0.013
+        probability: 0.043
         holding:
           fixed:
-            delay: 0.011678
+            delay: 29.101584
+      http-get-/jobs:
+        probability: 0.022
+        holding:
+          fixed:
+            delay: 29.101584
       http-get-/offices:
-        probability: 0.026
+        probability: 0.029
         holding:
           fixed:
-            delay: 0.011678
-      http-get-/jobs/pl/staff_engineer:
-        probability: 0.026
-        holding:
-          fixed:
-            delay: 0.011678
+            delay: 29.101584
 - name: ActorGroup-0
   entry:
     request: http-get-/brand.html
@@ -245,54 +169,39 @@ actors:
         holding:
           fixed:
             delay: 12
-- name: ActorGroup-8
+- name: ActorGroup-11
   entry:
-    request: http-get-/jobs/uk/senior_staff_engineer
+    request: http-get-/offices
     arrival:
       constant:
-        rate: 0.000001
+        rate: 0.000002
   edges:
-    http-get-/jobs/uk/senior_staff_engineer:
-      http-get-/:
-        probability: 0.018
-        holding:
-          fixed:
-            delay: 17.669686
+    http-get-/offices:
       http-get-/offices:
-        probability: 0.018
+        probability: 0.008
         holding:
           fixed:
-            delay: 17.669686
-      http-get-/team:
-        probability: 0.054
-        holding:
-          fixed:
-            delay: 17.669686
-      http-get-/management:
-        probability: 0.018
-        holding:
-          fixed:
-            delay: 17.669686
-      http-get-/jobs/pl/staff_engineer:
-        probability: 0.018
-        holding:
-          fixed:
-            delay: 17.669686
+            delay: 0.003835
       http-get-/jobs:
-        probability: 0.143
+        probability: 0.008
         holding:
           fixed:
-            delay: 17.669686
-      http-get-/jobs.html:
-        probability: 0.018
+            delay: 0.003835
+      http-get-/team:
+        probability: 0.024
         holding:
           fixed:
-            delay: 17.669686
-      http-get-/board:
-        probability: 0.018
+            delay: 0.003835
+      http-get-/:
+        probability: 0.056
         holding:
           fixed:
-            delay: 17.669686
+            delay: 0.003835
+      http-get-/management:
+        probability: 0.032
+        holding:
+          fixed:
+            delay: 0.003835
 - name: ActorGroup-10
   entry:
     request: http-get-/jobs_senior_java_developer_uk.html
@@ -301,39 +210,6 @@ actors:
         rate: 0.000001
   edges:
     http-get-/jobs_senior_java_developer_uk.html:
-- name: ActorGroup-11
-  entry:
-    request: http-get-/offices
-    arrival:
-      constant:
-        rate: 0.00001
-  edges:
-    http-get-/offices:
-      http-get-/:
-        probability: 0.056
-        holding:
-          fixed:
-            delay: 0.020714
-      http-get-/jobs:
-        probability: 0.081
-        holding:
-          fixed:
-            delay: 0.020714
-      http-get-/management:
-        probability: 0.032
-        holding:
-          fixed:
-            delay: 0.020714
-      http-get-/team:
-        probability: 0.073
-        holding:
-          fixed:
-            delay: 0.020714
-      http-get-/offices:
-        probability: 0.016
-        holding:
-          fixed:
-            delay: 0.020714
 - name: ActorGroup-1
   entry:
     request: http-get-/board
@@ -342,36 +218,112 @@ actors:
         rate: 0.000003
   edges:
     http-get-/board:
-      http-get-/jobs/uk/senior_staff_engineer:
-        probability: 0.012
-        holding:
-          fixed:
-            delay: 0.054013
       http-get-/team:
         probability: 0.085
         holding:
           fixed:
-            delay: 0.054013
-      http-get-/jobs:
-        probability: 0.012
-        holding:
-          fixed:
-            delay: 0.054013
+            delay: 0.06029
       http-get-/management:
         probability: 0.012
         holding:
           fixed:
-            delay: 0.054013
+            delay: 0.06029
       http-get-/offices:
         probability: 0.012
         holding:
           fixed:
-            delay: 0.054013
-      http-get-/:
-        probability: 0.073
+            delay: 0.06029
+      http-get-/jobs:
+        probability: 0.012
         holding:
           fixed:
-            delay: 0.054013
+            delay: 0.06029
+      http-get-/jobs/uk/senior_staff_engineer:
+        probability: 0.012
+        holding:
+          fixed:
+            delay: 0.06029
+      http-get-/:
+        probability: 0.061
+        holding:
+          fixed:
+            delay: 0.06029
+- name: ActorGroup-5
+  entry:
+    request: http-get-/management
+    arrival:
+      constant:
+        rate: 0.000001
+  edges:
+    http-get-/management:
+      http-get-/offices:
+        probability: 0.008
+        holding:
+          fixed:
+            delay: 0.147523
+      http-get-/:
+        probability: 0.031
+        holding:
+          fixed:
+            delay: 0.147523
+      http-get-/jobs:
+        probability: 0.023
+        holding:
+          fixed:
+            delay: 0.147523
+      http-get-/jobs.html:
+        probability: 0.008
+        holding:
+          fixed:
+            delay: 0.147523
+      http-get-/team:
+        probability: 0.194
+        holding:
+          fixed:
+            delay: 0.147523
+      http-get-/board:
+        probability: 0.023
+        holding:
+          fixed:
+            delay: 0.147523
+      http-get-/management:
+        probability: 0.016
+        holding:
+          fixed:
+            delay: 0.147523
+- name: ActorGroup-9
+  entry:
+    request: http-get-/jobs/pl/staff_engineer
+    arrival:
+      constant:
+        rate: 0.000004
+  edges:
+    http-get-/jobs/pl/staff_engineer:
+      http-get-/team:
+        probability: 0.013
+        holding:
+          fixed:
+            delay: 0.011569
+      http-get-/jobs:
+        probability: 0.064
+        holding:
+          fixed:
+            delay: 0.011569
+      http-get-/offices:
+        probability: 0.013
+        holding:
+          fixed:
+            delay: 0.011569
+      http-get-/:
+        probability: 0.064
+        holding:
+          fixed:
+            delay: 0.011569
+      http-get-/jobs/pl/staff_engineer:
+        probability: 0.013
+        holding:
+          fixed:
+            delay: 0.011569
 - name: ActorGroup-7
   entry:
     request: http-get-/team
@@ -380,41 +332,41 @@ actors:
         rate: 0.000003
   edges:
     http-get-/team:
-      http-get-/:
-        probability: 0.066
-        holding:
-          fixed:
-            delay: 5.967369
-      http-get-/offices:
-        probability: 0.033
-        holding:
-          fixed:
-            delay: 5.967369
-      http-get-/board:
-        probability: 0.041
-        holding:
-          fixed:
-            delay: 5.967369
       http-get-/jobs.html:
         probability: 0.012
         holding:
           fixed:
-            delay: 5.967369
+            delay: 111.620455
       http-get-/team:
         probability: 0.004
         holding:
           fixed:
-            delay: 5.967369
+            delay: 111.620455
+      http-get-/:
+        probability: 0.066
+        holding:
+          fixed:
+            delay: 111.620455
+      http-get-/board:
+        probability: 0.041
+        holding:
+          fixed:
+            delay: 111.620455
+      http-get-/offices:
+        probability: 0.033
+        holding:
+          fixed:
+            delay: 111.620455
       http-get-/jobs:
-        probability: 0.004
+        probability: 0.037
         holding:
           fixed:
-            delay: 5.967369
+            delay: 111.620455
       http-get-/management:
-        probability: 0.012
+        probability: 0.258
         holding:
           fixed:
-            delay: 5.967369
+            delay: 111.620455
 - name: ActorGroup-2
   entry:
     request: http-get-/jobs.html
@@ -423,64 +375,69 @@ actors:
         rate: 0.000001
   edges:
     http-get-/jobs.html:
-      http-get-/jobs/uk/senior_staff_engineer:
-        probability: 0.286
-        holding:
-          fixed:
-            delay: 44.173865
-      http-get-/team:
-        probability: 0.143
-        holding:
-          fixed:
-            delay: 44.173865
       http-get-/jobs/pl/staff_engineer:
         probability: 0.286
         holding:
           fixed:
-            delay: 44.173865
-- name: ActorGroup-5
+            delay: 2.211395
+      http-get-/team:
+        probability: 0.143
+        holding:
+          fixed:
+            delay: 2.211395
+      http-get-/jobs/uk/senior_staff_engineer:
+        probability: 0.286
+        holding:
+          fixed:
+            delay: 2.211395
+- name: ActorGroup-8
   entry:
-    request: http-get-/management
+    request: http-get-/jobs/uk/senior_staff_engineer
     arrival:
       constant:
-        rate: 0.000003
+        rate: 0.000004
   edges:
-    http-get-/management:
-      http-get-/offices:
-        probability: 0.008
-        holding:
-          fixed:
-            delay: 0.007779
-      http-get-/:
-        probability: 0.031
-        holding:
-          fixed:
-            delay: 0.007779
+    http-get-/jobs/uk/senior_staff_engineer:
       http-get-/jobs.html:
-        probability: 0.008
+        probability: 0.018
         holding:
           fixed:
-            delay: 0.007779
-      http-get-/board:
-        probability: 0.132
-        holding:
-          fixed:
-            delay: 0.007779
+            delay: 10.133829
       http-get-/management:
-        probability: 0.016
+        probability: 0.018
         holding:
           fixed:
-            delay: 0.007779
+            delay: 10.133829
+      http-get-/board:
+        probability: 0.018
+        holding:
+          fixed:
+            delay: 10.133829
+      http-get-/offices:
+        probability: 0.018
+        holding:
+          fixed:
+            delay: 10.133829
       http-get-/jobs:
-        probability: 0.008
+        probability: 0.143
         holding:
           fixed:
-            delay: 0.007779
+            delay: 10.133829
       http-get-/team:
-        probability: 0.194
+        probability: 0.054
         holding:
           fixed:
-            delay: 0.007779
+            delay: 10.133829
+      http-get-/:
+        probability: 0.018
+        holding:
+          fixed:
+            delay: 10.133829
+      http-get-/jobs/pl/staff_engineer:
+        probability: 0.018
+        holding:
+          fixed:
+            delay: 10.133829
 - name: ActorGroup-4
   entry:
     request: http-get-/offices.html
@@ -494,3 +451,46 @@ actors:
         holding:
           fixed:
             delay: 388
+- name: ActorGroup-12
+  entry:
+    request: http-get-/
+    arrival:
+      constant:
+        rate: 0.000086
+  edges:
+    http-get-/:
+      http-get-/:
+        probability: 0.016
+        holding:
+          fixed:
+            delay: 0.010002
+      http-get-/jobs:
+        probability: 0.02
+        holding:
+          fixed:
+            delay: 0.010002
+      http-get-/jobs/pl/staff_engineer:
+        probability: 0.001
+        holding:
+          fixed:
+            delay: 0.010002
+      http-get-/board:
+        probability: 0.001
+        holding:
+          fixed:
+            delay: 0.010002
+      http-get-/offices:
+        probability: 0.013
+        holding:
+          fixed:
+            delay: 0.010002
+      http-get-/team:
+        probability: 0.002
+        holding:
+          fixed:
+            delay: 0.010002
+      http-get-/management:
+        probability: 0.003
+        holding:
+          fixed:
+            delay: 0.010002
