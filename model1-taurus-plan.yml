@@ -19,18 +19,6 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com/board
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com/offices
-      method: GET
-      assert:
-        http-code: 200
     - url: http://skipjaq.com/jobs/pl/staff_engineer
       method: GET
       assert:
@@ -39,7 +27,11 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/jobs_senior_java_developer_uk.html
+    - url: http://skipjaq.com/
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/offices
       method: GET
       assert:
         http-code: 200
@@ -51,23 +43,11 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/jobs.html
+    - url: http://skipjaq.com/ui/login
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/about.html
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com/brand.html
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com/offices Telephone no
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com/offices.html
+    - url: http://skipjaq.com/board
       method: GET
       assert:
         http-code: 200
@@ -75,11 +55,31 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com/ui/login
+    - url: http://skipjaq.com/jobs.html
       method: GET
       assert:
         http-code: 200
     - url: http://skipjaq.com/index.html
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/brand.html
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/offices.html
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/about.html
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/offices Telephone no
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com/jobs_senior_java_developer_uk.html
       method: GET
       assert:
         http-code: 200
