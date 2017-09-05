@@ -15,23 +15,11 @@ execution:
 scenarios:
   source-activity-scenario:
     requests:
-    - url: http://skipjaq.com//offices.html
+    - url: http://skipjaq.com//v2
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com//team
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//jobs/pl/staff_engineer
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//ghost/blog
+    - url: http://skipjaq.com//awslondon17
       method: GET
       assert:
         http-code: 200
@@ -39,19 +27,7 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com//files/skipjaq_whitepaper.pdf
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//oss.html
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//v2
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//%5D
+    - url: http://skipjaq.com//news
       method: GET
       assert:
         http-code: 200
@@ -59,7 +35,7 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com//offices
+    - url: http://skipjaq.com//
       method: GET
       assert:
         http-code: 200
@@ -67,7 +43,43 @@ scenarios:
       method: GET
       assert:
         http-code: 200
+    - url: http://skipjaq.com//offices
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//oss.html
+      method: GET
+      assert:
+        http-code: 200
     - url: http://skipjaq.com//jobs
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//%5D
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//files/skipjaq_whitepaper.pdf
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//team
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//board
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//management
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//ghost/blog
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//offices.html
       method: GET
       assert:
         http-code: 200
@@ -75,7 +87,15 @@ scenarios:
       method: GET
       assert:
         http-code: 200
-    - url: http://skipjaq.com//news
+    - url: http://skipjaq.com//management.html
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//index.html
+      method: GET
+      assert:
+        http-code: 200
+    - url: http://skipjaq.com//jobs/pl/staff_engineer
       method: GET
       assert:
         http-code: 200
@@ -84,26 +104,6 @@ scenarios:
       assert:
         http-code: 200
     - url: http://skipjaq.com//jobs.html
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//management.html
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//awslondon17
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//management
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//board
-      method: GET
-      assert:
-        http-code: 200
-    - url: http://skipjaq.com//index.html
       method: GET
       assert:
         http-code: 200
