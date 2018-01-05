@@ -5,8 +5,8 @@ metadata:
   generated:
     inputs: [103396835_All-Web-Site-Data]
     host: http://skipjaq.com/
-    date: 2018-01-05T09:56:40.884Z
-    generation_time: 1.07s
+    date: 2018-01-05T09:57:33.627Z
+    generation_time: 0.192s
 
 configuration:
   model_entry: "scn-103396835"
@@ -15,51 +15,51 @@ configuration:
   users_per_second: 10
 
 requests:
-  req-103396835-7:
-    http:
-      method: GET
-      path: "/jobs"
-  req-103396835-9:
+  req-103396835-5:
     http:
       method: GET
       path: "/offices"
-  req-103396835-8:
+  req-103396835-9:
     http:
       method: GET
-      path: "/team"
-  req-103396835-10:
+      path: "/take-the-tour"
+  req-103396835-11:
     http:
       method: GET
       path: "/board"
+  req-103396835-4:
+    http:
+      method: GET
+      path: "/signup"
+  req-103396835-8:
+    http:
+      method: GET
+      path: "/case-studies"
+  req-103396835-6:
+    http:
+      method: GET
+      path: "/jobs"
+  req-103396835-2:
+    http:
+      method: GET
+      path: "/jobs/uk/senior_staff_engineer"
   req-103396835-0:
     http:
       method: GET
       path: "/"
-  req-103396835-3:
-    http:
-      method: GET
-      path: "/take-the-tour"
-  req-103396835-5:
-    http:
-      method: GET
-      path: "/jobs.html"
-  req-103396835-11:
-    http:
-      method: GET
-      path: "/signup"
-  req-103396835-4:
-    http:
-      method: GET
-      path: "/jobs/uk/senior_staff_engineer"
-  req-103396835-2:
-    http:
-      method: GET
-      path: "/case-studies"
   req-103396835-1:
     http:
       method: GET
+      path: "/team"
+  req-103396835-3:
+    http:
+      method: GET
+      path: "/jobs.html"
+  req-103396835-7:
+    http:
+      method: GET
       path: "/management"
-  req-103396835-6:
+  req-103396835-10:
     http:
       method: GET
       path: "/jobs/pl/staff_engineer"
@@ -69,28 +69,28 @@ scenarios:
     requestgraph:
       entries:
         req-103396835-0: 0.776881
-        req-103396835-1: 0.005376
-        req-103396835-10: 0.008064
-        req-103396835-3: 0.008064
-        req-103396835-4: 0.021505
-        req-103396835-6: 0.002688
-        req-103396835-7: 0.088709
-        req-103396835-8: 0.053763
-        req-103396835-9: 0.034946
+        req-103396835-1: 0.053763
+        req-103396835-10: 0.002688
+        req-103396835-11: 0.008064
+        req-103396835-2: 0.021505
+        req-103396835-5: 0.034946
+        req-103396835-6: 0.088709
+        req-103396835-7: 0.005376
+        req-103396835-9: 0.008064
       edges:
         req-103396835-0:
-          req-103396835-7:
+          req-103396835-0:
+            probability: 0.100817
+            holding:
+              fixed:
+                delay: 99.890109
+          req-103396835-6:
             probability: 0.081743
             holding:
               fixed:
                 delay: 99.890109
-          req-103396835-3:
-            probability: 0.027247
-            holding:
-              fixed:
-                delay: 99.890109
-          req-103396835-2:
-            probability: 0.070844
+          req-103396835-5:
+            probability: 0.095367
             holding:
               fixed:
                 delay: 99.890109
@@ -99,133 +99,91 @@ scenarios:
             holding:
               fixed:
                 delay: 99.890109
-          req-103396835-0:
-            probability: 0.100817
-            holding:
-              fixed:
-                delay: 99.890109
-          req-103396835-9:
-            probability: 0.095367
-            holding:
-              fixed:
-                delay: 99.890109
-          req-103396835-8:
+          req-103396835-1:
             probability: 0.114441
             holding:
               fixed:
                 delay: 99.890109
-          req-103396835-11:
+          req-103396835-2:
             probability: 0.002724
             holding:
               fixed:
                 delay: 99.890109
-        req-103396835-1:
           req-103396835-8:
-            probability: 0.121212
+            probability: 0.070844
             holding:
               fixed:
-                delay: 22.6
-          req-103396835-10:
-            probability: 0.333333
-            holding:
-              fixed:
-                delay: 22.6
-          req-103396835-0:
-            probability: 0.090909
-            holding:
-              fixed:
-                delay: 22.6
+                delay: 99.890109
           req-103396835-9:
-            probability: 0.090909
+            probability: 0.027247
             holding:
               fixed:
-                delay: 22.6
+                delay: 99.890109
+        req-103396835-1:
           req-103396835-7:
-            probability: 0.121212
+            probability: 0.3125
             holding:
               fixed:
-                delay: 22.6
+                delay: 35.603174
+          req-103396835-6:
+            probability: 0.052083
+            holding:
+              fixed:
+                delay: 35.603174
+          req-103396835-1:
+            probability: 0.052083
+            holding:
+              fixed:
+                delay: 35.603174
+          req-103396835-0:
+            probability: 0.104166
+            holding:
+              fixed:
+                delay: 35.603174
+          req-103396835-11:
+            probability: 0.0625
+            holding:
+              fixed:
+                delay: 35.603174
+          req-103396835-5:
+            probability: 0.041666
+            holding:
+              fixed:
+                delay: 35.603174
+          req-103396835-3:
+            probability: 0.03125
+            holding:
+              fixed:
+                delay: 35.603174
         req-103396835-10:
+          req-103396835-6:
+            probability: 0.142857
+            holding:
+              fixed:
+                delay: 6
+        req-103396835-11:
           req-103396835-7:
+            probability: 0.05
+            holding:
+              fixed:
+                delay: 84.4
+          req-103396835-6:
             probability: 0.1
             holding:
               fixed:
                 delay: 84.4
+          req-103396835-5:
+            probability: 0.05
+            holding:
+              fixed:
+                delay: 84.4
           req-103396835-0:
             probability: 0.05
             holding:
               fixed:
                 delay: 84.4
-          req-103396835-1:
-            probability: 0.05
-            holding:
-              fixed:
-                delay: 84.4
-          req-103396835-9:
-            probability: 0.05
-            holding:
-              fixed:
-                delay: 84.4
-        req-103396835-11:
-          req-103396835-0:
-            probability: 1
-            holding:
-              fixed:
-                delay: 3
         req-103396835-2:
-          req-103396835-9:
-            probability: 0.033333
-            holding:
-              fixed:
-                delay: 85.235294
-          req-103396835-2:
-            probability: 0.033333
-            holding:
-              fixed:
-                delay: 85.235294
-          req-103396835-8:
-            probability: 0.133333
-            holding:
-              fixed:
-                delay: 85.235294
-          req-103396835-3:
-            probability: 0.166666
-            holding:
-              fixed:
-                delay: 85.235294
-          req-103396835-0:
-            probability: 0.2
-            holding:
-              fixed:
-                delay: 85.235294
-        req-103396835-3:
-          req-103396835-2:
-            probability: 0.166666
-            holding:
-              fixed:
-                delay: 50.714285
-          req-103396835-8:
-            probability: 0.055555
-            holding:
-              fixed:
-                delay: 50.714285
-          req-103396835-0:
-            probability: 0.055555
-            holding:
-              fixed:
-                delay: 50.714285
-          req-103396835-9:
-            probability: 0.111111
-            holding:
-              fixed:
-                delay: 50.714285
-        req-103396835-4:
-          req-103396835-7:
-            probability: 0.166666
-            holding:
-              fixed:
-                delay: 13.875
-          req-103396835-9:
+          req-103396835-5:
             probability: 0.041666
             holding:
               fixed:
@@ -235,108 +193,150 @@ scenarios:
             holding:
               fixed:
                 delay: 13.875
-          req-103396835-8:
+          req-103396835-6:
+            probability: 0.166666
+            holding:
+              fixed:
+                delay: 13.875
+          req-103396835-1:
             probability: 0.041666
             holding:
               fixed:
                 delay: 13.875
+        req-103396835-3:
+          req-103396835-2:
+            probability: 0.333333
+            holding:
+              fixed:
+                delay: 13
+          req-103396835-0:
+            probability: 0.333333
+            holding:
+              fixed:
+                delay: 13
+        req-103396835-4:
+          req-103396835-0:
+            probability: 1
+            holding:
+              fixed:
+                delay: 3
         req-103396835-5:
-          req-103396835-0:
-            probability: 0.333333
-            holding:
-              fixed:
-                delay: 13
-          req-103396835-4:
-            probability: 0.333333
-            holding:
-              fixed:
-                delay: 13
-        req-103396835-6:
-          req-103396835-7:
-            probability: 0.142857
-            holding:
-              fixed:
-                delay: 6
-        req-103396835-7:
-          req-103396835-9:
-            probability: 0.071428
-            holding:
-              fixed:
-                delay: 16.410256
-          req-103396835-0:
-            probability: 0.071428
-            holding:
-              fixed:
-                delay: 16.410256
-          req-103396835-4:
-            probability: 0.166666
-            holding:
-              fixed:
-                delay: 16.410256
-          req-103396835-7:
-            probability: 0.035714
-            holding:
-              fixed:
-                delay: 16.410256
-          req-103396835-8:
-            probability: 0.047619
-            holding:
-              fixed:
-                delay: 16.410256
-          req-103396835-6:
-            probability: 0.071428
-            holding:
-              fixed:
-                delay: 16.410256
-        req-103396835-8:
-          req-103396835-5:
-            probability: 0.03125
-            holding:
-              fixed:
-                delay: 35.603174
-          req-103396835-7:
-            probability: 0.052083
-            holding:
-              fixed:
-                delay: 35.603174
-          req-103396835-1:
-            probability: 0.3125
-            holding:
-              fixed:
-                delay: 35.603174
-          req-103396835-0:
-            probability: 0.104166
-            holding:
-              fixed:
-                delay: 35.603174
-          req-103396835-10:
-            probability: 0.0625
-            holding:
-              fixed:
-                delay: 35.603174
-          req-103396835-8:
-            probability: 0.052083
-            holding:
-              fixed:
-                delay: 35.603174
-          req-103396835-9:
-            probability: 0.041666
-            holding:
-              fixed:
-                delay: 35.603174
-        req-103396835-9:
-          req-103396835-7:
-            probability: 0.030303
-            holding:
-              fixed:
-                delay: 109.333333
-          req-103396835-8:
-            probability: 0.227272
-            holding:
-              fixed:
-                delay: 109.333333
           req-103396835-0:
             probability: 0.151515
             holding:
               fixed:
                 delay: 109.333333
+          req-103396835-6:
+            probability: 0.030303
+            holding:
+              fixed:
+                delay: 109.333333
+          req-103396835-1:
+            probability: 0.227272
+            holding:
+              fixed:
+                delay: 109.333333
+        req-103396835-6:
+          req-103396835-6:
+            probability: 0.035714
+            holding:
+              fixed:
+                delay: 16.410256
+          req-103396835-0:
+            probability: 0.071428
+            holding:
+              fixed:
+                delay: 16.410256
+          req-103396835-5:
+            probability: 0.071428
+            holding:
+              fixed:
+                delay: 16.410256
+          req-103396835-1:
+            probability: 0.047619
+            holding:
+              fixed:
+                delay: 16.410256
+          req-103396835-10:
+            probability: 0.071428
+            holding:
+              fixed:
+                delay: 16.410256
+          req-103396835-2:
+            probability: 0.166666
+            holding:
+              fixed:
+                delay: 16.410256
+        req-103396835-7:
+          req-103396835-0:
+            probability: 0.090909
+            holding:
+              fixed:
+                delay: 22.6
+          req-103396835-11:
+            probability: 0.333333
+            holding:
+              fixed:
+                delay: 22.6
+          req-103396835-6:
+            probability: 0.121212
+            holding:
+              fixed:
+                delay: 22.6
+          req-103396835-5:
+            probability: 0.090909
+            holding:
+              fixed:
+                delay: 22.6
+          req-103396835-1:
+            probability: 0.121212
+            holding:
+              fixed:
+                delay: 22.6
+        req-103396835-8:
+          req-103396835-5:
+            probability: 0.033333
+            holding:
+              fixed:
+                delay: 85.235294
+          req-103396835-1:
+            probability: 0.133333
+            holding:
+              fixed:
+                delay: 85.235294
+          req-103396835-8:
+            probability: 0.033333
+            holding:
+              fixed:
+                delay: 85.235294
+          req-103396835-9:
+            probability: 0.166666
+            holding:
+              fixed:
+                delay: 85.235294
+          req-103396835-0:
+            probability: 0.2
+            holding:
+              fixed:
+                delay: 85.235294
+        req-103396835-9:
+          req-103396835-1:
+            probability: 0.055555
+            holding:
+              fixed:
+                delay: 50.714285
+          req-103396835-0:
+            probability: 0.055555
+            holding:
+              fixed:
+                delay: 50.714285
+          req-103396835-5:
+            probability: 0.111111
+            holding:
+              fixed:
+                delay: 50.714285
+          req-103396835-8:
+            probability: 0.166666
+            holding:
+              fixed:
+                delay: 50.714285
